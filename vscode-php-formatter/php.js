@@ -39,7 +39,7 @@ function indentSnippets(code) {
         if ('})]'.indexOf(code.charAt(0)) >= 0) leval--;
         if (code) {
             for (let i = 0; i < leval * 4; i++) {
-                code = ' ' + code;
+                code = ` ${code}`;
             }
         }
         if ('{(['.indexOf(code.charAt(code.length - 1)) >= 0) leval++;

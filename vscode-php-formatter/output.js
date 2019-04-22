@@ -1,5 +1,5 @@
 const vscode = require('vscode');
-var outputChannel;
+let outputChannel;
 module.exports = msg => {
     if (outputChannel === undefined) {
         outputChannel = vscode.window.createOutputChannel('formatter');
