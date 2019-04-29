@@ -1,6 +1,7 @@
 {
     "debug.openDebug": "neverOpen",
     "editor.detectIndentation": false,
+    "editor.fontFamily": "Consolas, '微软雅黑'",
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "ctrlCmd",
@@ -25,12 +26,15 @@
     "terminal.integrated.shell.windows": "C:/Program Files/Git/bin/bash.exe",
     "workbench.startupEditor": "newUntitledFile",
 
-    "[bat]": {
-        "files.encoding": "gb2312",
-    },
+    "[bat]": { "files.encoding": "gb2312" },
 
     "extensions.autoUpdate": false,
     "extensions.ignoreRecommendations": false,
+
+    "C_Cpp.updateChannel": "Insiders",
+    "C_Cpp.default.cStandard": "c11",
+    "C_Cpp.default.cppStandard": "c++11",
+    "C_Cpp.navigation.length": 120,
 
     "svg.format.plugins": { "sortAttrs": true, "convertPathData": false, "mergePaths": false },
 
@@ -48,21 +52,29 @@
         "arg-rest", // use of arguments to function(...args)
         "arg-spread", // use of apply() to spread operator
         "obj-method", // function values in objects to methods
-        "obj-shorthand", // {foo: foo} to {foo}
+        // "obj-shorthand", // {foo: foo} to {foo}
         "no-strict", // remove "use strict" directives
         "exponent", // Math pow() to ** operator (ES7)
-        "multi-var", // single var x,y; declaration to var x; var y; (refactor)
-
-        "let", // var to let/const
+        // "multi-var", // single var x,y; declaration to var x; var y; (refactor)
+        // "let", // var to let/const
         "class", // prototype assignments to class declaration
         // "commonjs", // CommonJS module loading to import/export
         "template", // string concatenation to template string
         "default-param", // use of || to default parameters
-        "destruct-param", // use destructuring for objects in function parameters
-        "includes", // indexOf() != -1 to includes() (ES7)
+        // "destruct-param", // use destructuring for objects in function parameters
+        // "includes", // indexOf() != -1 to includes() (ES7)
     ],
 
     "eslint.autoFixOnSave": true,
     "eslint.alwaysShowStatus": true,
 
+    "prettier.eslintIntegration": true,
+    "prettier.tabWidth": 4,
+    "prettier.trailingComma": "all",
+
+    "code-runner.temporaryFileName": "test",
+
+    "importCost.bundleSizeDecoration": "minified",
+    "importCost.debug": true,
+    "importCost.timeout": 100000,
 }
