@@ -1,6 +1,5 @@
 {
     "debug.openDebug": "neverOpen",
-    "editor.detectIndentation": false,
     "editor.fontFamily": "Consolas, '微软雅黑'",
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
@@ -21,28 +20,24 @@
     "javascript.format.enable": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "search.followSymlinks": false,
-    "terminal.integrated.fontFamily": "Consolas",
+
+    "terminal.integrated.fontFamily": "Consolas, '微软雅黑'",
     "terminal.integrated.fontSize": 13,
+    // "terminal.integrated.shell.windows": "C:/Windows/system32/cmd.exe",
     "terminal.integrated.shell.windows": "C:/Program Files/Git/bin/bash.exe",
-    "workbench.startupEditor": "newUntitledFile",
 
     "[bat]": { "files.encoding": "gb2312" },
 
     "extensions.autoUpdate": false,
     "extensions.ignoreRecommendations": false,
 
-    "C_Cpp.updateChannel": "Insiders",
-    "C_Cpp.default.cStandard": "c11",
-    "C_Cpp.default.cppStandard": "c++11",
-    "C_Cpp.navigation.length": 120,
-
     "svg.format.plugins": { "sortAttrs": true, "convertPathData": false, "mergePaths": false },
 
     "beautify.language": { "js": { "type": ["javascript", "json", "jsonc"], "filename": [".jshintrc", ".jsbeautifyrc", "settings.json"] }, "css": [], "html": [] },
-    "beautify.config": "D:/projects/rc/.jsbeautifyrc",
+    "beautify.config": "~/.jsbeautifyrc",
 
     "csscomb.formatOnSave": true,
-    "csscomb.preset": "D:/projects/rc/csscomb.js",
+    "csscomb.preset": "~/csscomb.js",
 
     "lebab.transforms": [
         "arrow", // callback to arrow function
