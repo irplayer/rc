@@ -11,7 +11,7 @@ function log(s) {
 function run(command) {
     command.unshift('cmd', '/c');
     // log(command.join(' '));
-    shell.Run(command.join(' '), 0, true);
+    shell.Run(command.join(' '), 0, false);
 }
 
 function mklink(src, dst, file) {
@@ -20,7 +20,7 @@ function mklink(src, dst, file) {
         dst += file;
     }
     log(src + ' --> ' + dst);
-    run([file ? 'del' : 'rd', dst, '&&', 'mklink', file ? '' : '/D', dst, src]);
+    run([file ? 'del' : 'rd', dst, '&', 'mklink', file ? '' : '/D', dst, src]);
 }
 
 var current = fso.GetFile(WScript.ScriptFullName).ParentFolder.Path + '\\';
