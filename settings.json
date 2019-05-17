@@ -17,7 +17,6 @@
     "html.format.contentUnformatted": "pre,code,textarea,style",
     "html.format.endWithNewline": true,
     "html.format.maxPreserveNewLines": 0,
-    "javascript.format.enable": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "search.followSymlinks": false,
 
@@ -26,7 +25,10 @@
     // "terminal.integrated.shell.windows": "C:/Windows/system32/cmd.exe",
     "terminal.integrated.shell.windows": "C:/Program Files/Git/bin/bash.exe",
 
+    "files.associations": { "*.frm": "vb" },
+
     "[bat]": { "files.encoding": "gb2312" },
+    "[jsonc]": { "editor.defaultFormatter": "HookyQR.beautify" },
 
     "extensions.autoUpdate": false,
     "extensions.ignoreRecommendations": false,
