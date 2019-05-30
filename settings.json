@@ -18,6 +18,7 @@
     "html.format.endWithNewline": true,
     "html.format.maxPreserveNewLines": 0,
     "javascript.updateImportsOnFileMove.enabled": "always",
+    "php.validate.enable": false,
     "search.followSymlinks": false,
 
     "terminal.integrated.fontFamily": "Consolas, '微软雅黑'",
@@ -74,4 +75,7 @@
     "importCost.bundleSizeDecoration": "minified",
     "importCost.debug": true,
     "importCost.timeout": 100000,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 }

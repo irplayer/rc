@@ -16,15 +16,24 @@ module.exports = {
 
     'space-before-colon': '', // ':'
     'space-after-colon': ' ',
-    'space-before-combinator': '', // combinator (i.e. 'p > a')
+
+    'space-before-combinator': ' ', // combinator (i.e. 'p > a')
     'space-after-combinator': ' ',
     'space-before-opening-brace': ' ', // '{'
-    'space-after-opening-brace': '\n',
-    'space-before-closing-brace': '\n', // '}'
+    'space-after-opening-brace': ' ',
+    'space-before-closing-brace': ' ', // '}'
+
+    // 'space-before-combinator': '', // combinator (i.e. 'p > a')
+    // 'space-after-combinator': ' ',
+    // 'space-before-opening-brace': ' ', // '{'
+    // 'space-after-opening-brace': '\n',
+    // 'space-before-closing-brace': '\n', // '}'
+
     'space-before-selector-delimiter': '',
     'space-after-selector-delimiter': '\n',
     'space-between-declarations': ' ', // declarations (i.e. 'color: tomato')
-    'lines-between-rulesets': 0,
+
+    'lines-between-rulesets': 1,
     'sort-order': [
         [
             'display',
