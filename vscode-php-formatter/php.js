@@ -4,9 +4,10 @@ const format = code => {
     let leval = 0;
     const indentSnippets = code => {
         code = code.trim();
+        const comment = code.startsWith('/');
         if ('})]'.includes(code.charAt(0))) leval--;
         if (code) code = `${' '.repeat(leval * 4)}${code}`;
-        if ('{(['.includes(code.charAt(code.length - 1))) leval++;
+        if ('{(['.includes(code.charAt(code.length - 1)) && !comment) leval++;
         return code;
     };
     output('[formatCode] Start');
