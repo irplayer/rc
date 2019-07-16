@@ -10,10 +10,6 @@
         "when": "editorFocus"
     },
     {
-        "key": "f5",
-        "command": "workbench.files.action.refreshFilesExplorer"
-    },
-    {
         "key": "ctrl+shift+alt+s",
         "command": "editor.action.sortLinesAscending"
     },

@@ -29,10 +29,13 @@
     "files.associations": { "*.frm": "vb" },
 
     "[bat]": { "files.encoding": "gb2312" },
+    "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
     "[jsonc]": { "editor.defaultFormatter": "HookyQR.beautify" },
 
     "extensions.autoUpdate": false,
     "extensions.ignoreRecommendations": false,
+
+    "remote.SSH.path": "ssh.exe",
 
     "svg.format.plugins": { "sortAttrs": true, "convertPathData": false, "mergePaths": false },
 
@@ -75,7 +78,4 @@
     "importCost.bundleSizeDecoration": "minified",
     "importCost.debug": true,
     "importCost.timeout": 100000,
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
 }
