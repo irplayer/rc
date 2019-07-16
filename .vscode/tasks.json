@@ -5,8 +5,13 @@
     "tasks": [{
         "label": "build",
         "type": "shell",
-        "command": "cscript",
-        "args": ["mklink.js"],
+        "windows": {
+            "command": "cscript",
+            "args": ["mklink.js"],
+        },
+        "linux": {
+            "command": "./ln.sh"
+        },
         "group": { "kind": "build", "isDefault": true },
         "presentation": {
             "showReuseMessage": false,

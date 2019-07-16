@@ -1,3 +1,7 @@
-.* eol=lf
+.*      eol=lf
+*.js    eol=lf
+*.json  eol=lf
+*.md    eol=lf
+*.sh    eol=lf
 
-*.bat eol=crlf
+*.bat   eol=crlf
