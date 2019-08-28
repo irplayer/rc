@@ -10,7 +10,11 @@ link() {
     local dest=~
     test $# -gt 1 && dest=$2
     ln -s -f $dir/$1 $dest
-    ls -l $dest/$1
+    if [ -f $dest ]; then
+        ls -l $dest
+    else
+        ls -l $dest/$1
+    fi
 }
 
 links() {
@@ -25,7 +29,7 @@ echo Begin
 links .prettierrc.js .eslintrc.js .clang-format .jsbeautifyrc csscomb.js
 
 link keybindings.json ~/.config/Code/User
-# link settings.json ~/.config/Code/User
+link settings.jsonc ~/.config/Code/User/settings.json
 
 link chuaple.php-formatter-1.0.0 ~/.vscode/extensions
 
