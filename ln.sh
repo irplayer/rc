@@ -2,21 +2,31 @@
 # author: chuaple
 # create: 2019/07/16
 
-path=$(cd `dirname $0`; pwd)
+set -u
+
+dir=$(cd $(dirname $0) && pwd)
 
 link() {
-    if [ -f ~/$1 ]; then rm ~/$1; fi
-    ln -s $path/$1 ~
-    ls -l ~/$1
+    local dest=~
+    test $# -gt 1 && dest=$2
+    ln -s -f $dir/$1 $dest
+    ls -l $dest/$1
 }
 
 links() {
-    for arg in "$@"
-    do
+    local arg
+    for arg in "$@"; do
         link $arg
     done
 }
 
 echo Begin
+
 links .prettierrc.js .eslintrc.js .clang-format .jsbeautifyrc csscomb.js
+
+link keybindings.json ~/.config/Code/User
+# link settings.json ~/.config/Code/User
+
+link chuaple.php-formatter-1.0.0 ~/.vscode/extensions
+
 echo Done

@@ -32,5 +32,5 @@ mklink(current, home, '.jsbeautifyrc');
 mklink(current, home, 'csscomb.js');
 mklink(current, user, 'settings.json');
 mklink(current, user, 'keybindings.json');
-mklink(current + 'vscode-php-formatter', home + '.vscode\\extensions\\chuaple.php-formatter-1.0.0');
+mklink(current + 'chuaple.php-formatter-1.0.0', home + '.vscode\\extensions\\chuaple.php-formatter-1.0.0');
 log('Done');
