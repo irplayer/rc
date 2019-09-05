@@ -10,7 +10,7 @@
             "args": ["mklink.js"],
         },
         "linux": {
-            "command": "./ln.sh"
+            "command": "./apply"
         },
         "group": { "kind": "build", "isDefault": true },
         "presentation": {

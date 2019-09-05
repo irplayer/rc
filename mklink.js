@@ -28,9 +28,9 @@ var home = shell.ExpandenVironmentStrings('%HOMEDRIVE%%HOMEPATH%') + '\\';
 var user = home + 'AppData\\Roaming\\Code\\User\\';
 
 log('Begin');
-mklink(current, home, '.jsbeautifyrc');
-mklink(current, home, 'csscomb.js');
-mklink(current, user, 'settings.json');
-mklink(current, user, 'keybindings.json');
+mklink(current + 'files\\', home, '.jsbeautifyrc');
+mklink(current + 'files\\', home, '.csscomb.js');
+mklink(current + 'files\\', user, 'settings.json');
+mklink(current + 'files\\', user, 'keybindings.json');
 mklink(current + 'chuaple.php-formatter-1.0.0', home + '.vscode\\extensions\\chuaple.php-formatter-1.0.0');
 log('Done');

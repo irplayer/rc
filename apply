@@ -1,0 +1,32 @@
+#!/bin/bash
+# author: chuaple
+# create: 2019/07/16
+
+set -u
+
+dir=$(cd $(dirname $0) && pwd)
+
+link() {
+    local dst=${@: -1}
+    local src
+    for src in "${@:1:$#-1}"; do
+        ln -s -f $dir/$src $dst
+
+        if [ -f $dst ]; then
+            ls -l $dst
+        else
+            ls -l $dst/$(basename $src)
+        fi
+    done
+}
+
+echo Begin
+
+link files/.[!.]* ~
+
+link keybindings.json ~/.config/Code/User
+link settings.jsonc ~/.config/Code/User/settings.json
+
+link chuaple.php-formatter-1.0.0 ~/.vscode/extensions
+
+echo Done
