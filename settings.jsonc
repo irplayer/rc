@@ -1,6 +1,7 @@
 {
     "breadcrumbs.enabled": false,
     "debug.openDebug": "neverOpen",
+    "diffEditor.ignoreTrimWhitespace": true,
     "editor.autoClosingBrackets": "always",
     "editor.autoClosingQuotes": "always",
     "editor.formatOnSave": true,
@@ -19,8 +20,8 @@
     "git.autofetch": true,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
-    "search.smartCase": true,
     "search.followSymlinks": false,
+    "search.smartCase": true,
     "html.format.contentUnformatted": "pre,code,textarea,style",
     "html.format.endWithNewline": true,
     "html.format.maxPreserveNewLines": 0,
@@ -31,16 +32,24 @@
     "terminal.integrated.rightClickBehavior": "copyPaste",
 
     "[bat]": { "files.encoding": "gb2312" },
-    "[jsonc]": { "editor.formatOnSave":false, "editor.defaultFormatter": "HookyQR.beautify" },
+    "[markdown]": { "editor.fontFamily": "Sarasa Mono SC Light", "editor.fontSize": 16 },
+    "[javascript]": { "editor.defaultFormatter": "HookyQR.beautify" },
+    "[json]": { "editor.defaultFormatter": "HookyQR.beautify" },
+    "[jsonc]": { "editor.defaultFormatter": "HookyQR.beautify" },
 
     "extensions.autoUpdate": false,
     "extensions.ignoreRecommendations": false,
 
-    "beautify.language": { "js": { "type": ["javascript", "json", "jsonc"], "filename": [".jshintrc", ".jsbeautifyrc", "settings.json"] }, "css": [], "html": [] },
     "beautify.config": "~/.jsbeautifyrc",
+    "beautify.language": { "js": { "type": ["javascript", "json", "jsonc"], "filename": [".jshintrc", ".jsbeautifyrc", "settings.json"] }, "css": [], "html": [] },
 
-    "eslint.autoFixOnSave": true,
+    "csscomb.formatOnSave": true,
+    "csscomb.preset": "~/.csscomb.js",
+
     "eslint.alwaysShowStatus": true,
+    "eslint.autoFixOnSave": true,
+
+    "lebab.transforms": ["arrow", "arrow-return", "for-of", "for-each", "arg-spread", "obj-method", "no-strict", "exponent", "class", "template", "default-param", "destruct-param", ],
 
     "prettier.arrowParens": "avoid",
     "prettier.bracketSpacing": true,
@@ -52,10 +61,7 @@
     "prettier.trailingComma": "es5",
     "prettier.useTabs": false,
 
-    "csscomb.formatOnSave": true,
-    "csscomb.preset": "~/.csscomb.js",
+    "shellformat.effectLanguages": ["shellscript", "dockerfile", "dotenv", "hosts", "ignore", "gitignore", "azcli"],
 
     "svg.format.plugins": { "sortAttrs": true, "convertPathData": false, "mergePaths": false },
-
-    "shellformat.effectLanguages": ["shellscript", "dockerfile", "dotenv", "hosts", "ignore", "gitignore", "azcli"],
 }
