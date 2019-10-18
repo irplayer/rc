@@ -33,7 +33,7 @@ module.exports = {
     'space-after-selector-delimiter': '\n',
     'space-between-declarations': ' ', // declarations (i.e. 'color: tomato')
 
-    'lines-between-rulesets': 1,
+    'lines-between-rulesets': 0,
     'sort-order': [
         [
             'display',
