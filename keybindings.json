@@ -5,17 +5,24 @@
         "command": "workbench.action.reloadWindow"
     },
     {
-        "key": "alt+f3",
-        "command": "editor.action.selectHighlights",
-        "when": "editorFocus"
+        "key": "ctrl+shift+alt+s",
+        "command": "editor.action.sortLinesAscending",
+        "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+shift+alt+s",
-        "command": "editor.action.sortLinesAscending"
+        "key": "ctrl+shift+alt+d",
+        "command": "editor.action.sortLinesDescending",
+        "when": "editorTextFocus"
     },
     {
         "key": "ctrl+k ctrl+backspace",
-        "command": "deleteAllLeft"
+        "command": "deleteAllLeft",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+k ctrl+t",
+        "command": "editor.action.transformToTitlecase",
+        "when": "editorTextFocus"
     },
     {
         "key": "ctrl+shift+t",
@@ -24,5 +31,9 @@
     {
         "key": "ctrl+alt+e",
         "command": "workbench.action.editor.changeEncoding"
+    },
+    {
+        "key": "ctrl+shift+9",
+        "command": "editor.action.selectToBracket"
     }
 ]
