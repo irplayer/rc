@@ -15,12 +15,10 @@ function run(command) {
 }
 
 function mklink(src, dst, file) {
-    if (file) {
-        src += file;
-        dst += file;
-    }
+    src += file;
+    dst += file;
     log(src + ' --> ' + dst);
-    run([file ? 'del' : 'rd', dst, '&', 'mklink', file ? '' : '/D', dst, src]);
+    run([file ? 'del' : 'rd', dst, '&', 'mklink', dst, src]);
 }
 
 var current = fso.GetFile(WScript.ScriptFullName).ParentFolder.Path + '\\';
@@ -32,5 +30,4 @@ mklink(current + 'files\\', home, '.jsbeautifyrc');
 mklink(current + 'files\\', home, '.csscomb.js');
 mklink(current + 'files\\', user, 'settings.json');
 mklink(current + 'files\\', user, 'keybindings.json');
-mklink(current + 'chuaple.php-formatter-1.0.0', home + '.vscode\\extensions\\chuaple.php-formatter-1.0.0');
 log('Done');

@@ -27,6 +27,4 @@ link files/.[!.]* ~
 link keybindings.json ~/.config/Code/User
 link settings.jsonc ~/.config/Code/User/settings.json
 
-link chuaple.php-formatter-1.0.0 ~/.vscode/extensions
-
 echo Done
