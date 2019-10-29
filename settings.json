@@ -50,24 +50,24 @@
     "csscomb.preset": "~/csscomb.js",
 
     "lebab.transforms": [
-        "arrow", // callback to arrow function
-        "arrow-return", // drop return statements in arrow functions
-        "for-of", // for loop to for-of loop
-        "for-each", // for loop to Array forEach()
         "arg-rest", // use of arguments to function(...args)
         "arg-spread", // use of apply() to spread operator
-        "obj-method", // function values in objects to methods
-        // "obj-shorthand", // {foo: foo} to {foo}
-        "no-strict", // remove "use strict" directives
-        "exponent", // Math pow() to ** operator (ES7)
-        // "multi-var", // single var x,y; declaration to var x; var y; (refactor)
-        // "let", // var to let/const
+        "arrow-return", // drop return statements in arrow functions
+        "arrow", // callback to arrow function
         "class", // prototype assignments to class declaration
-        // "commonjs", // CommonJS module loading to import/export
-        "template", // string concatenation to template string
         "default-param", // use of || to default parameters
+        "exponent", // Math pow() to ** operator (ES7)
+        "for-each", // for loop to Array forEach()
+        "for-of", // for loop to for-of loop
+        "no-strict", // remove "use strict" directives
+        "obj-method", // function values in objects to methods
+        "template" // string concatenation to template string
+        // "commonjs", // CommonJS module loading to import/export
         // "destruct-param", // use destructuring for objects in function parameters
         // "includes", // indexOf() != -1 to includes() (ES7)
+        // "let", // var to let/const
+        // "multi-var", // single var x,y; declaration to var x; var y; (refactor)
+        // "obj-shorthand", // {foo: foo} to {foo}
     ],
 
     "eslint.autoFixOnSave": true,
@@ -87,5 +87,5 @@
 
     "importCost.bundleSizeDecoration": "minified",
     "importCost.debug": true,
-    "importCost.timeout": 100000,
+    "importCost.timeout": 100000
 }

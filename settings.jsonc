@@ -49,7 +49,7 @@
     "eslint.alwaysShowStatus": true,
     "eslint.autoFixOnSave": true,
 
-    "lebab.transforms": ["arrow", "arrow-return", "for-of", "for-each", "arg-spread", "obj-method", "no-strict", "exponent", "class", "template", "default-param", "destruct-param", ],
+    "lebab.transforms": ["arrow", "arrow-return", "for-of", "for-each", "arg-spread", "obj-method", "no-strict", "exponent", "class", "template", "default-param", "destruct-param"],
 
     "prettier.arrowParens": "avoid",
     "prettier.bracketSpacing": true,
@@ -63,5 +63,5 @@
 
     "shellformat.effectLanguages": ["shellscript", "dockerfile", "dotenv", "hosts", "ignore", "gitignore", "azcli"],
 
-    "svg.format.plugins": { "sortAttrs": true, "convertPathData": false, "mergePaths": false },
+    "svg.format.plugins": { "sortAttrs": true, "convertPathData": false, "mergePaths": false }
 }
