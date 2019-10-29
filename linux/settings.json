@@ -9,48 +9,42 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "all",
-    "editor.snippetSuggestions": "top",
-    "editor.suggest.shareSuggestSelections": true,
     "explorer.confirmDelete": false,
+    "extensions.autoUpdate": false,
+    "extensions.ignoreRecommendations": false,
     "files.encoding": "utf8",
     "files.eol": "\n",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+    "git.allowForcePush": true,
     "git.autofetch": true,
+    "git.autoStash": true,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
-    "search.followSymlinks": false,
-    "search.smartCase": true,
     "html.format.contentUnformatted": "pre,code,textarea,style",
     "html.format.endWithNewline": true,
     "html.format.maxPreserveNewLines": 0,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "php.validate.enable": false,
+    "search.smartCase": true,
     "terminal.integrated.copyOnSelection": true,
     "terminal.integrated.fontFamily": "monospace",
     "terminal.integrated.rightClickBehavior": "copyPaste",
 
     "[bat]": { "files.encoding": "gb2312" },
-    "[markdown]": { "editor.fontFamily": "Sarasa Mono SC Light", "editor.fontSize": 16 },
     "[javascript]": { "editor.defaultFormatter": "HookyQR.beautify" },
     "[json]": { "editor.defaultFormatter": "HookyQR.beautify" },
     "[jsonc]": { "editor.defaultFormatter": "HookyQR.beautify" },
-
-    "extensions.autoUpdate": false,
-    "extensions.ignoreRecommendations": false,
+    "[markdown]": { "editor.fontFamily": "Sarasa Mono SC Light", "editor.fontSize": 16 },
 
     "beautify.config": "~/.jsbeautifyrc",
     "beautify.language": { "js": { "type": ["javascript", "json", "jsonc"], "filename": [".jshintrc", ".jsbeautifyrc", "settings.json"] }, "css": [], "html": [] },
-
     "csscomb.formatOnSave": true,
     "csscomb.preset": "~/.csscomb.js",
-
     "eslint.alwaysShowStatus": true,
     "eslint.autoFixOnSave": true,
-
-    "lebab.transforms": ["arrow", "arrow-return", "for-of", "for-each", "arg-spread", "obj-method", "no-strict", "exponent", "class", "template", "default-param", "destruct-param"],
-
+    "lebab.transforms": ["arg-spread", "arrow-return", "arrow", "class", "default-param", "destruct-param", "exponent", "for-each", "for-of", "no-strict", "obj-method", "template"],
     "prettier.arrowParens": "avoid",
     "prettier.bracketSpacing": true,
     "prettier.printWidth": 160,
@@ -60,8 +54,6 @@
     "prettier.tabWidth": 4,
     "prettier.trailingComma": "es5",
     "prettier.useTabs": false,
-
     "shellformat.effectLanguages": ["shellscript", "dockerfile", "dotenv", "hosts", "ignore", "gitignore", "azcli"],
-
-    "svg.format.plugins": { "sortAttrs": true, "convertPathData": false, "mergePaths": false }
+    "svg.format.plugins": { "sortAttrs": true, "convertPathData": false, "mergePaths": false },
 }

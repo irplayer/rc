@@ -1,78 +1,55 @@
 {
     "breadcrumbs.enabled": false,
     "debug.openDebug": "neverOpen",
+    "diffEditor.ignoreTrimWhitespace": true,
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingQuotes": "always",
     "editor.fontFamily": "Consolas, '微软雅黑'",
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "all",
-    "editor.snippetSuggestions": "top",
+    "editor.suggest.shareSuggestSelections": true,
     "explorer.confirmDelete": false,
+    "extensions.autoUpdate": false,
+    "extensions.ignoreRecommendations": false,
     "files.encoding": "utf8",
     "files.eol": "\n",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+    "git.allowForcePush": true,
     "git.autofetch": true,
+    "git.autoStash": true,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "html.format.contentUnformatted": "pre,code,textarea,style",
     "html.format.endWithNewline": true,
     "html.format.maxPreserveNewLines": 0,
     "javascript.updateImportsOnFileMove.enabled": "always",
+    "json.format.enable": false,
     "php.validate.enable": false,
-    "search.followSymlinks": false,
-
     "terminal.integrated.copyOnSelection": true,
     "terminal.integrated.fontFamily": "Consolas, '微软雅黑'",
     "terminal.integrated.fontSize": 13,
-    // "terminal.integrated.shell.windows": "C:/Windows/system32/cmd.exe",
     "terminal.integrated.shell.windows": "C:/Program Files/Git/bin/bash.exe",
-
-    "remote.SSH.path": "ssh.exe",
 
     "files.associations": { "*.frm": "vb" },
 
     "[bat]": { "files.encoding": "gb2312" },
-    "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "[javascript]": { "editor.defaultFormatter": "HookyQR.beautify" },
+    "[json]": { "editor.defaultFormatter": "HookyQR.beautify" },
     "[jsonc]": { "editor.defaultFormatter": "HookyQR.beautify" },
+    "[markdown]": { "editor.fontFamily": "等距更纱黑体 SC Light", "editor.fontSize": 16 },
 
-    "extensions.autoUpdate": false,
-    "extensions.ignoreRecommendations": false,
-
-    "svg.format.plugins": { "sortAttrs": true, "convertPathData": false, "mergePaths": false },
-
-    "beautify.language": { "js": { "type": ["javascript", "json", "jsonc"], "filename": [".jshintrc", ".jsbeautifyrc", "settings.json"] }, "css": [], "html": [] },
     "beautify.config": "~/.jsbeautifyrc",
-
+    "beautify.language": { "js": { "type": ["javascript", "json", "jsonc"], "filename": [".jshintrc", ".jsbeautifyrc", "settings.json"] }, "css": [], "html": [] },
     "csscomb.formatOnSave": true,
-    "csscomb.preset": "~/csscomb.js",
-
-    "lebab.transforms": [
-        "arg-rest", // use of arguments to function(...args)
-        "arg-spread", // use of apply() to spread operator
-        "arrow-return", // drop return statements in arrow functions
-        "arrow", // callback to arrow function
-        "class", // prototype assignments to class declaration
-        "default-param", // use of || to default parameters
-        "exponent", // Math pow() to ** operator (ES7)
-        "for-each", // for loop to Array forEach()
-        "for-of", // for loop to for-of loop
-        "no-strict", // remove "use strict" directives
-        "obj-method", // function values in objects to methods
-        "template" // string concatenation to template string
-        // "commonjs", // CommonJS module loading to import/export
-        // "destruct-param", // use destructuring for objects in function parameters
-        // "includes", // indexOf() != -1 to includes() (ES7)
-        // "let", // var to let/const
-        // "multi-var", // single var x,y; declaration to var x; var y; (refactor)
-        // "obj-shorthand", // {foo: foo} to {foo}
-    ],
-
-    "eslint.autoFixOnSave": true,
+    "csscomb.preset": "~/.csscomb.js",
     "eslint.alwaysShowStatus": true,
-
+    "eslint.autoFixOnSave": true,
+    "lebab.transforms": ["arg-rest", "arg-spread", "arrow-return", "arrow", "class", "default-param", "exponent", "for-each", "for-of", "no-strict", "obj-method", "template"],
     "prettier.arrowParens": "avoid",
     "prettier.bracketSpacing": true,
     "prettier.printWidth": 160,
@@ -82,10 +59,6 @@
     "prettier.tabWidth": 4,
     "prettier.trailingComma": "es5",
     "prettier.useTabs": false,
-
-    "code-runner.temporaryFileName": "test",
-
-    "importCost.bundleSizeDecoration": "minified",
-    "importCost.debug": true,
-    "importCost.timeout": 100000
+    "remote.SSH.path": "ssh",
+    "svg.format.plugins": { "sortAttrs": true, "convertPathData": false, "mergePaths": false },
 }
