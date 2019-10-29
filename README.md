@@ -10,7 +10,7 @@
 
 -   用于同步
     [`keybindings.json`](keybindings.json)
-    `settings.json`([`windows`](settings.json) | [`linux`](settings.jsonc))
+    `settings.json`([`windows`](settings.json) | [`linux`](linux/settings.json))
     等配置文件。
 
 -   用于同步

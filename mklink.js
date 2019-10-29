@@ -28,6 +28,6 @@ var user = home + 'AppData\\Roaming\\Code\\User\\';
 log('Begin');
 mklink(current + 'files\\', home, '.jsbeautifyrc');
 mklink(current + 'files\\', home, '.csscomb.js');
-mklink(current + 'files\\', user, 'settings.json');
-mklink(current + 'files\\', user, 'keybindings.json');
+mklink(current, user, 'settings.json');
+mklink(current, user, 'keybindings.json');
 log('Done');

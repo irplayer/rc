@@ -11,12 +11,7 @@ link() {
     local src
     for src in "${@:1:$#-1}"; do
         ln -s -f $dir/$src $dst
-
-        if [ -f $dst ]; then
-            ls -l $dst
-        else
-            ls -l $dst/$(basename $src)
-        fi
+        ls -l $dst/$(basename $src)
     done
 }
 
@@ -24,7 +19,6 @@ echo Begin
 
 link files/.[!.]* ~
 
-link keybindings.json ~/.config/Code/User
-link settings.jsonc ~/.config/Code/User/settings.json
+link keybindings.json linux/* ~/.config/Code/User
 
 echo Done
