@@ -41,7 +41,7 @@
     "[javascript]": { "editor.defaultFormatter": "HookyQR.beautify" },
     "[json]": { "editor.defaultFormatter": "HookyQR.beautify" },
     "[jsonc]": { "editor.defaultFormatter": "HookyQR.beautify" },
-    "[markdown]": { "editor.fontFamily": "等距更纱黑体 SC Light", "editor.fontSize": 16 },
+    "[markdown]": { "editor.fontFamily": "Sarasa Mono SC Light", "editor.fontSize": 16 },
 
     "beautify.config": "~/.jsbeautifyrc",
     "beautify.language": { "js": { "type": ["javascript", "json", "jsonc"], "filename": [".jshintrc", ".jsbeautifyrc", "settings.json"] }, "css": [], "html": [] },

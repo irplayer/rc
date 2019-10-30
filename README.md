@@ -1,4 +1,6 @@
-# **_run control_**
+# _run control_
+
+## _Usage_
 
 用于 **_Visual Studio Code_** 配置及插件的保存与跨平台同步。
 
@@ -20,3 +22,32 @@
     [`eslint`](files/.eslintrc.js)
     [`prettier`](files/.prettierrc.js)
     等插件的运行控制文件。
+
+## _More_
+
+### _Sarasa Gothic_
+
+-   :link: https://github.com/be5invis/sarasa-gothic/releases
+
+```json
+{
+    "editor.fontFamily": "Sarasa Mono SC Light"
+}
+```
+
+```json
+{
+    "editor.fontFamily": "等距更纱黑体 SC Light"
+}
+```
+
+### _Cascadia Code_
+
+-   :link: https://github.com/microsoft/cascadia-code/releases
+
+```json
+{
+    "editor.fontFamily": "Cascadia Code",
+    "editor.fontLigatures": true
+}
+```
