@@ -231,7 +231,7 @@ module.exports = {
         // 'sort-keys': 0, // 要求对象属性按序排列
         // 'sort-vars': 0, // [f] 要求同一个声明块中的变量按顺序排列
         'space-before-blocks': [2, 'always'], // [f] 强制在块之前使用一致的空格
-        'space-before-function-paren': [2, 'never'], // [f] 强制在 function的左括号之前使用一致的空格
+        'space-before-function-paren': [2, { 'anonymous': 'never', 'named': 'never', 'asyncArrow': 'always' }], // [f] 强制在 function的左括号之前使用一致的空格
         // 'spaced-comment': [2, 'always', { 'markers': ['global', 'globals', 'eslint', 'eslint-disable', 'package', '!', ','] }], // [f] 强制在注释中 // 或 /* 使用一致的空格
         // 'space-infix-ops': 0, // [f] 要求操作符周围有空格
         'space-in-parens': [2, 'never'], // [f] 强制在圆括号内使用一致的空格
