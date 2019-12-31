@@ -48,7 +48,7 @@ module.exports = {
         // 'valid-jsdoc': 0, // [f] 强制使用有效的 JSDoc 注释
         // 'valid-typeof': 2, // [r] 强制 typeof 表达式与有效的字符串进行比较
 
-        // Best Practices  这些规则是关于最佳实践的，帮助你避免一些问题:
+        // Best Practices  这些规则是关于最佳实践的，帮助你避免一些问题
         // 'accessor-pairs': 0, // 强制 getter 和 setter 在对象中成对出现
         // 'array-callback-return': 0, // 强制数组方法的回调函数中有 return 语句
         // 'block-scoped-var': 0, // 强制把变量的使用限制在其定义的作用域范围内
@@ -131,12 +131,13 @@ module.exports = {
         // 'no-restricted-globals': 0, // 禁用特定的全局变量
         // 'no-shadow': 0, // 禁止变量声明与外层作用域的变量同名
         // 'no-shadow-restricted-names': 0, // 禁止将标识符定义为受限的名字
-        // 'no-undef': 2, // [r] 禁用未声明的变量，除非它们在 /*global */ 注释中被提到
+        // 'no-undef': 2, // [r] 禁用未声明的变量，除非它们在 /* global */ 注释中被提到
         // 'no-undefined': 0, // 禁止将 undefined 作为标识符
         // 'no-undef-init': 0, // [f] 禁止将变量初始化为 undefined
         'no-unused-vars': [2, { 'args': 'after-used' }], // [r] 禁止出现未使用过的变量
         // 'no-use-before-define': 0, // 禁止在变量定义之前使用它们
-        // Node.js and CommonJS  这些规则是关于Node.js 或 在浏览器中使用CommonJS 的
+
+        // Node.js and CommonJS  这些规则是关于 Node.js 或在浏览器中使用 CommonJS 的
         // 'callback-return': 0, // 强制数组方法的回调函数中有 return 语句
         // 'global-require': 0, // 要求 require() 出现在顶层模块作用域中
         'handle-callback-err': [2, '^(err|error)$'], // 要求回调函数中有容错处理
@@ -157,7 +158,7 @@ module.exports = {
         'brace-style': [2, '1tbs', { 'allowSingleLine': true }], // [f] 强制在代码块中使用一致的大括号风格
         'camelcase': [2, { 'properties': 'never' }], // 强制使用骆驼拼写法命名约定
         // 'capitalized-comments': 0, // [f] 强制或禁止对注释的第一个字母大写
-        'comma-dangle': [2, 'always-multiline'], // [f] 要求或禁止末尾逗号
+        'comma-dangle': [2, { 'arrays': 'always-multiline', 'objects': 'always-multiline', 'exports': 'always-multiline', 'functions': 'always-multiline' }], // [f] 要求或禁止末尾逗号
         'comma-spacing': [2, { 'before': false, 'after': true }], // [f] 强制在逗号前后使用一致的空格
         'comma-style': [2, 'last'], // [f] 强制使用一致的逗号风格
         // 'computed-property-spacing': 0, // [f] 强制在计算的属性的方括号中使用一致的空格
@@ -246,12 +247,12 @@ module.exports = {
         'arrow-parens': [2, 'as-needed'], // [f] 要求箭头函数的参数使用圆括号
         'arrow-spacing': [2, { 'before': true, 'after': true }], // [f] 强制箭头函数的箭头前后使用一致的空格
         // 'constructor-super': 2, // [r] 要求在构造函数中有 super() 的调用
-        'generator-star-spacing': [2, { 'before': true, 'after': true }], // [f] 强制 generator 函数中 * 号周围使用一致的空格
+        // 'generator-star-spacing': [2, { 'before': true, 'after': true }], // [f] 强制 generator 函数中 * 号周围使用一致的空格
         // 'no-class-assign': 2, // [r] 禁止修改类声明的变量
         // 'no-confusing-arrow': 0, // [f] 禁止在可能与比较操作符相混淆的地方使用箭头函数
         // 'no-const-assign': 2, // [r] 禁止修改 const 声明的变量
         // 'no-dupe-class-members': 2, // [r] 禁止类成员中出现重复的名称
-        // 'no-duplicate-imports': 0, // 禁止重复模块导入
+        'no-duplicate-imports': 2, // 禁止重复模块导入
         // 'no-new-symbol': 2, // [r] 禁止 Symbolnew 操作符和 new 一起使用
         // 'no-restricted-imports': 0, // 禁止使用指定的 import 加载的模块
         // 'no-this-before-super': 2, // [r] 禁止在构造函数中，在调用 super() 之前使用 this 或 super
@@ -262,16 +263,16 @@ module.exports = {
         'object-shorthand': 2, // [f] 要求或禁止对象字面量中方法和属性使用简写语法
         'prefer-arrow-callback': 2, // [f] 要求回调函数使用箭头函数
         'prefer-const': 2, // [f] 要求使用 const 声明那些声明后不再被修改的变量
-        'prefer-destructuring': ['error', { 'VariableDeclarator': { 'array': false, 'object': true }, 'AssignmentExpression': { 'array': true, 'object': true } }, { 'enforceForRenamedProperties': false }], // 优先使用数组和对象解构
-        // 'prefer-numeric-literals': 0, // [f] 禁用 parseInt() 和 Number.parseInt()，使用二进制，八进制和十六进制字面量
+        'prefer-destructuring': [2, { 'VariableDeclarator': { 'array': false, 'object': true }, 'AssignmentExpression': { 'array': true, 'object': true } }, { 'enforceForRenamedProperties': false }], // 优先使用数组和对象解构
+        'prefer-numeric-literals': 2, // [f] 禁用 parseInt() 和 Number.parseInt()，使用二进制，八进制和十六进制字面量
         // 'prefer-rest-params': 0, // 要求使用剩余参数而不是 arguments
         'prefer-spread': 2, // [f] 要求使用扩展运算符而非 .apply()
         'prefer-template': 2, // [f] 要求使用模板字面量而非字符串连接
         // 'require-yield': 2, // [r] 要求 generator 函数内有 yield
         // 'rest-spread-spacing': 0, // [f] 强制剩余和扩展运算符及其表达式之间有空格
-        // 'sort-imports': 0, // [f] 强制模块内的 import 排序
+        'sort-imports': [2, { 'ignoreDeclarationSort': true }], // [f] 强制模块内的 import 排序
         // 'symbol-description': 0, // 要求 symbol 描述
         'template-curly-spacing': [2, 'never'], // [f] 要求或禁止模板字符串中的嵌入表达式周围空格的使用
-        'yield-star-spacing': [2, 'both'], // [f] 强制在 yield* 表达式中 * 周围使用空格
+        // 'yield-star-spacing': [2, 'both'], // [f] 强制在 yield* 表达式中 * 周围使用空格
     },
 };
