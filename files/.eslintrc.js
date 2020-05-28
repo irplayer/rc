@@ -1,7 +1,7 @@
 module.exports = {
     root: true,
     parserOptions: {
-        ecmaVersion: 2018,
+        ecmaVersion: 2020,
         sourceType: 'module',
     },
     env: {
@@ -158,7 +158,7 @@ module.exports = {
         'brace-style': [2, '1tbs', { 'allowSingleLine': true }], // [f] 强制在代码块中使用一致的大括号风格
         'camelcase': [2, { 'properties': 'never' }], // 强制使用骆驼拼写法命名约定
         // 'capitalized-comments': 0, // [f] 强制或禁止对注释的第一个字母大写
-        'comma-dangle': [2, { 'arrays': 'always-multiline', 'objects': 'always-multiline', 'exports': 'always-multiline', 'functions': 'always-multiline' }], // [f] 要求或禁止末尾逗号
+        'comma-dangle': [2, { 'arrays': 'always-multiline', 'objects': 'always-multiline', 'exports': 'always-multiline', 'functions': 'only-multiline' }], // [f] 要求或禁止末尾逗号
         'comma-spacing': [2, { 'before': false, 'after': true }], // [f] 强制在逗号前后使用一致的空格
         'comma-style': [2, 'last'], // [f] 强制使用一致的逗号风格
         // 'computed-property-spacing': 0, // [f] 强制在计算的属性的方括号中使用一致的空格
@@ -252,13 +252,13 @@ module.exports = {
         // 'no-confusing-arrow': 0, // [f] 禁止在可能与比较操作符相混淆的地方使用箭头函数
         // 'no-const-assign': 2, // [r] 禁止修改 const 声明的变量
         // 'no-dupe-class-members': 2, // [r] 禁止类成员中出现重复的名称
-        'no-duplicate-imports': 2, // 禁止重复模块导入
+        // 'no-duplicate-imports': 2, // 禁止重复模块导入
         // 'no-new-symbol': 2, // [r] 禁止 Symbolnew 操作符和 new 一起使用
         // 'no-restricted-imports': 0, // 禁止使用指定的 import 加载的模块
         // 'no-this-before-super': 2, // [r] 禁止在构造函数中，在调用 super() 之前使用 this 或 super
         // 'no-useless-computed-key': 0, // [f] 禁止在对象中使用不必要的计算属性
         // 'no-useless-constructor': 0, // 禁用不必要的构造函数
-        // 'no-useless-rename': 0, // [f] 禁止在 import 和 export 和解构赋值时将引用重命名为相同的名字
+        'no-useless-rename': 2, // [f] 禁止在 import 和 export 和解构赋值时将引用重命名为相同的名字
         'no-var': 2, // [f] 要求使用 let 或 const 而不是 var
         'object-shorthand': 2, // [f] 要求或禁止对象字面量中方法和属性使用简写语法
         'prefer-arrow-callback': 2, // [f] 要求回调函数使用箭头函数
