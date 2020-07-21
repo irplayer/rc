@@ -81,7 +81,7 @@ module.exports = {
         // 'no-implied-eval': 0, // 禁止使用类似 eval() 的方法
         // 'no-invalid-this': 0, // 禁止 this 关键字出现在类和类对象之外
         // 'no-iterator': 0, // 禁用 __iterator__ 属性
-        'no-labels': [2, { 'allowLoop': false, 'allowSwitch': false }], // 禁用标签语句
+        'no-labels': [2, { allowLoop: false, allowSwitch: false }], // 禁用标签语句
         // 'no-lone-blocks': 0, // 禁用不必要的嵌套块
         // 'no-loop-func': 0, // 禁止在循环中出现 function 声明和表达式
         // 'no-magic-numbers': 0, // 禁用魔术数字
@@ -99,9 +99,9 @@ module.exports = {
         'no-return-assign': [2, 'except-parens'], // 禁止在 return 语句中使用赋值语句
         // 'no-return-await': 0, // 禁用不必要的 return await
         // 'no-script-url': 0, // 禁止使用 javascript: url
-        // 'no-self-assign': 2, // [r] 禁止自我赋值
+        'no-self-assign': [2, { props: false }], // [r] 禁止自我赋值
         // 'no-self-compare': 0, // 禁止自身比较
-        'no-sequences': 2, // 禁用逗号操作符
+        'no-sequences': 0, // 禁用逗号操作符
         'no-throw-literal': 2, // 禁止抛出异常字面量
         'no-unmodified-loop-condition': 2, // 禁用一成不变的循环条件
         // 'no-unused-expressions': 0, // 禁止出现未使用过的表达式
@@ -134,7 +134,7 @@ module.exports = {
         // 'no-undef': 2, // [r] 禁用未声明的变量，除非它们在 /* global */ 注释中被提到
         // 'no-undefined': 0, // 禁止将 undefined 作为标识符
         // 'no-undef-init': 0, // [f] 禁止将变量初始化为 undefined
-        'no-unused-vars': [2, { 'args': 'after-used' }], // [r] 禁止出现未使用过的变量
+        'no-unused-vars': [2, { ignoreRestSiblings: true, args: 'after-used' }], // [r] 禁止出现未使用过的变量
         // 'no-use-before-define': 0, // 禁止在变量定义之前使用它们
 
         // Node.js and CommonJS  这些规则是关于 Node.js 或在浏览器中使用 CommonJS 的
@@ -155,11 +155,11 @@ module.exports = {
         'array-bracket-spacing': [2, 'never'], // [f] 强制数组方括号中使用一致的空格
         // 'array-element-newline': 0, // [f] 强制数组元素间出现换行
         'block-spacing': [2, 'always'], // [f] 禁止或强制在代码块中开括号前和闭括号后有空格
-        'brace-style': [2, '1tbs', { 'allowSingleLine': true }], // [f] 强制在代码块中使用一致的大括号风格
-        'camelcase': [2, { 'properties': 'never' }], // 强制使用骆驼拼写法命名约定
+        'brace-style': [2, '1tbs', { allowSingleLine: true }], // [f] 强制在代码块中使用一致的大括号风格
+        'camelcase': [2, { properties: 'never' }], // 强制使用骆驼拼写法命名约定
         // 'capitalized-comments': 0, // [f] 强制或禁止对注释的第一个字母大写
-        'comma-dangle': [2, { 'arrays': 'always-multiline', 'objects': 'always-multiline', 'exports': 'always-multiline', 'functions': 'only-multiline' }], // [f] 要求或禁止末尾逗号
-        'comma-spacing': [2, { 'before': false, 'after': true }], // [f] 强制在逗号前后使用一致的空格
+        'comma-dangle': [2, { arrays: 'always-multiline', objects: 'always-multiline', exports: 'always-multiline', functions: 'only-multiline' }], // [f] 要求或禁止末尾逗号
+        'comma-spacing': [2, { before: false, after: true }], // [f] 强制在逗号前后使用一致的空格
         'comma-style': [2, 'last'], // [f] 强制使用一致的逗号风格
         // 'computed-property-spacing': 0, // [f] 强制在计算的属性的方括号中使用一致的空格
         // 'consistent-this': 0, // 当获取当前执行环境的上下文时，强制使用一致的命名
@@ -173,14 +173,14 @@ module.exports = {
         // 'id-length': 0, // 强制标识符的最小和最大长度
         // 'id-match': 0, // 要求标识符匹配一个指定的正则表达式
         // 'implicit-arrow-linebreak': 0, // [f] 强制隐式返回的箭头函数体的位置
-        'indent': [2, 4, { 'SwitchCase': 1 }], // [f] 强制使用一致的缩进
+        'indent': [2, 4, { SwitchCase: 1 }], // [f] 强制使用一致的缩进
         'jsx-quotes': [2, 'prefer-single'], // [f] 强制在 JSX 属性中一致地使用双引号或单引号
-        'key-spacing': [2, { 'beforeColon': false, 'afterColon': true }], // [f] 强制在对象字面量的属性中键和值之间使用一致的间距
-        'keyword-spacing': [2, { 'before': true, 'after': true }], // [f] 强制在关键字前后使用一致的空格
+        'key-spacing': [2, { beforeColon: false, afterColon: true }], // [f] 强制在对象字面量的属性中键和值之间使用一致的间距
+        'keyword-spacing': [2, { before: true, after: true }], // [f] 强制在关键字前后使用一致的空格
         // 'linebreak-style': 0, // [f] 强制使用一致的换行风格
         // 'line-comment-position': 0, // 强制行注释的位置
         // 'lines-around-comment': 0, // [f] 要求在注释周围有空行
-        // 'lines-between-class-members': 0, // [f] 要求或禁止类成员之间出现空行
+        'lines-between-class-members': [2, 'always'], // [f] 要求或禁止类成员之间出现空行
         // 'max-depth': 0, // 强制可嵌套的块的最大深度
         // 'max-len': 0, // 强制一行的最大长度
         // 'max-lines': 0, // 强制最大行数
@@ -190,7 +190,7 @@ module.exports = {
         // 'max-statements-per-line': 0, // 强制每一行中所允许的最大语句数量
         // 'multiline-comment-style': 0, // [f] 强制对多行注释使用特定风格
         // 'multiline-ternary': 0, // 要求或禁止在三元操作数中间换行
-        'new-cap': [2, { 'newIsCap': true, 'capIsNew': false }], // 要求构造函数首字母大写
+        'new-cap': [2, { newIsCap: true, capIsNew: false }], // 要求构造函数首字母大写
         // 'newline-per-chained-call': 0, // [f] 要求方法链中每个调用都有一个换行符
         // 'new-parens': 0, // [f] 要求调用无参构造函数时有圆括号
         'no-array-constructor': 2, // 禁用 Array 构造函数
@@ -201,7 +201,7 @@ module.exports = {
         // 'no-mixed-operators': 0, // 禁止混合使用不同的操作符
         // 'no-mixed-spaces-and-tabs': 2, // [r] 禁止空格和 tab 的混合缩进
         // 'no-multi-assign': 0, // 禁止连续赋值
-        'no-multiple-empty-lines': [2, { 'max': 1 }], // [f] 禁止出现多行空行
+        'no-multiple-empty-lines': [2, { max: 1 }], // [f] 禁止出现多行空行
         // 'nonblock-statement-body-position': 0, // [f] 强制单个语句的位置
         // 'no-negated-condition': 0, // 禁用否定的表达式
         // 'no-nested-ternary': 0, // 禁用嵌套的三元表达式
@@ -209,34 +209,34 @@ module.exports = {
         // 'no-plusplus': 0, // 禁用一元操作符 ++ 和 --
         // 'no-restricted-syntax': 0, // 禁用特定的语法
         // 'no-tabs': 0, // 禁用 tab
-        // 'no-ternary': 0, // 禁用三元操作符
+        'no-ternary': 0, // 禁用三元操作符
         // 'no-trailing-spaces': 0, // [f] 禁用行尾空格
         // 'no-underscore-dangle': 0, // 禁止标识符中有悬空下划线
-        'no-unneeded-ternary': [2, { 'defaultAssignment': false }], // [f] 禁止可以在有更简单的可替代的表达式时使用三元操作符
+        'no-unneeded-ternary': [2, { defaultAssignment: false }], // [f] 禁止可以在有更简单的可替代的表达式时使用三元操作符
         // 'no-whitespace-before-property': 0, // [f] 禁止属性前有空白
         // 'object-curly-newline': 0, // [f] 强制大括号内换行符的一致性
-        'object-curly-spacing': [2, 'always', { 'objectsInObjects': true }], // [f] 强制在大括号中使用一致的空格
+        'object-curly-spacing': [2, 'always', { objectsInObjects: true }], // [f] 强制在大括号中使用一致的空格
         // 'object-property-newline': 0, // [f] 强制将对象的属性放在不同的行上
         'one-var': [2, 'never'], // 强制函数中的变量要么一起声明要么分开声明
         // 'one-var-declaration-per-line': 0, // [f] 要求或禁止在变量声明周围换行
         // 'operator-assignment': 0, // [f] 要求或禁止在可能的情况下使用简化的赋值操作符
-        'operator-linebreak': [2, 'after', { 'overrides': { '?': 'before', ':': 'before' } }], // [f] 强制操作符使用一致的换行符
+        'operator-linebreak': [2, 'after', { overrides: { '?': 'before', ':': 'before' } }], // [f] 强制操作符使用一致的换行符
         'padded-blocks': [2, 'never'], // [f] 要求或禁止块内填充
         // 'padding-line-between-statements': 0, // [f] 要求或禁止在语句间填充空行
         // 'quote-props': 0, // [f] 要求对象字面量属性名称用引号括起来
-        'quotes': [2, 'single', { 'avoidEscape': true, 'allowTemplateLiterals': true }], // [f] 强制使用一致的反勾号、双引号或单引号
+        'quotes': [2, 'single', { avoidEscape: true, allowTemplateLiterals: true }], // [f] 强制使用一致的反勾号、双引号或单引号
         // 'require-jsdoc': 0, // 要求使用 JSDoc 注释
         'semi': [2, 'always'], // [f] 要求或禁止使用分号代替 ASI
-        'semi-spacing': [2, { 'before': false, 'after': true }], // [f] 强制分号之前和之后使用一致的空格
+        'semi-spacing': [2, { before: false, after: true }], // [f] 强制分号之前和之后使用一致的空格
         // 'semi-style': 0, // [f] 强制分号的位置
         // 'sort-keys': 0, // 要求对象属性按序排列
         // 'sort-vars': 0, // [f] 要求同一个声明块中的变量按顺序排列
         'space-before-blocks': [2, 'always'], // [f] 强制在块之前使用一致的空格
-        'space-before-function-paren': [2, { 'anonymous': 'never', 'named': 'never', 'asyncArrow': 'always' }], // [f] 强制在 function的左括号之前使用一致的空格
+        'space-before-function-paren': [2, { anonymous: 'ignore', named: 'never', asyncArrow: 'always' }], // [f] 强制在 function的左括号之前使用一致的空格
         // 'spaced-comment': [2, 'always', { 'markers': ['global', 'globals', 'eslint', 'eslint-disable', 'package', '!', ','] }], // [f] 强制在注释中 // 或 /* 使用一致的空格
         // 'space-infix-ops': 0, // [f] 要求操作符周围有空格
         'space-in-parens': [2, 'never'], // [f] 强制在圆括号内使用一致的空格
-        'space-unary-ops': [2, { 'words': true, 'nonwords': false }], // [f] 强制在一元操作符前后使用一致的空格
+        'space-unary-ops': [2, { words: true, nonwords: false }], // [f] 强制在一元操作符前后使用一致的空格
         // 'switch-colon-spacing': 0, // [f] 强制在 switch 的冒号左右有空格
         // 'template-tag-spacing': 0, // [f] 要求或禁止在模板标记和它们的字面量之间有空格
         // 'unicode-bom': 0, // [f] 要求或禁止 Unicode 字节顺序标记 (BOM)
@@ -245,7 +245,7 @@ module.exports = {
         // ECMAScript 6
         // 'arrow-body-style': 0, // [f] 要求箭头函数体使用大括号
         'arrow-parens': [2, 'as-needed'], // [f] 要求箭头函数的参数使用圆括号
-        'arrow-spacing': [2, { 'before': true, 'after': true }], // [f] 强制箭头函数的箭头前后使用一致的空格
+        'arrow-spacing': [2, { before: true, after: true }], // [f] 强制箭头函数的箭头前后使用一致的空格
         // 'constructor-super': 2, // [r] 要求在构造函数中有 super() 的调用
         // 'generator-star-spacing': [2, { 'before': true, 'after': true }], // [f] 强制 generator 函数中 * 号周围使用一致的空格
         // 'no-class-assign': 2, // [r] 禁止修改类声明的变量
@@ -263,14 +263,14 @@ module.exports = {
         'object-shorthand': 2, // [f] 要求或禁止对象字面量中方法和属性使用简写语法
         'prefer-arrow-callback': 2, // [f] 要求回调函数使用箭头函数
         'prefer-const': 2, // [f] 要求使用 const 声明那些声明后不再被修改的变量
-        'prefer-destructuring': [2, { 'VariableDeclarator': { 'array': false, 'object': true }, 'AssignmentExpression': { 'array': true, 'object': true } }, { 'enforceForRenamedProperties': false }], // 优先使用数组和对象解构
+        'prefer-destructuring': [2, { VariableDeclarator: { array: false, object: true }, AssignmentExpression: { array: true, object: true } }, { enforceForRenamedProperties: false }], // 优先使用数组和对象解构
         'prefer-numeric-literals': 2, // [f] 禁用 parseInt() 和 Number.parseInt()，使用二进制，八进制和十六进制字面量
         // 'prefer-rest-params': 0, // 要求使用剩余参数而不是 arguments
         'prefer-spread': 2, // [f] 要求使用扩展运算符而非 .apply()
         'prefer-template': 2, // [f] 要求使用模板字面量而非字符串连接
         // 'require-yield': 2, // [r] 要求 generator 函数内有 yield
         // 'rest-spread-spacing': 0, // [f] 强制剩余和扩展运算符及其表达式之间有空格
-        'sort-imports': [2, { 'ignoreDeclarationSort': true }], // [f] 强制模块内的 import 排序
+        'sort-imports': [2, { ignoreDeclarationSort: true }], // [f] 强制模块内的 import 排序
         // 'symbol-description': 0, // 要求 symbol 描述
         'template-curly-spacing': [2, 'never'], // [f] 要求或禁止模板字符串中的嵌入表达式周围空格的使用
         // 'yield-star-spacing': [2, 'both'], // [f] 强制在 yield* 表达式中 * 周围使用空格
