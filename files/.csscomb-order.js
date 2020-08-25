@@ -1,12 +1,16 @@
+// https://github.com/csscomb/csscomb.js/blob/dev/doc/options.md
 module.exports = [
-    ['display', 'visibility', 'float', 'clear', 'position', 'z-index', 'content'],
-    ['overflow', 'overflow-x', 'overflow-y'],
-    ['clip', 'zoom', 'src'],
-    ['grid-template', 'grid-template-rows', 'grid-template-columns', 'grid-template-areas'],
+    ['$import', '$include', '$extend'],
+    ['visibility', 'position', 'z-index', 'display'],
+    ['float', 'clear'],
     ['flex-flow', 'flex-direction', 'flex-wrap', 'flex-order', 'flex-pack', 'flex-align', 'flex'],
-    ['box-sizing', 'top', 'right', 'bottom', 'left', 'width', 'min-width', 'max-width', 'height', 'min-height', 'max-height'],
+    ['grid-template', 'grid-template-rows', 'grid-template-columns', 'grid-template-areas', 'grid-gap', 'grid-area'],
+    ['content', 'clip', 'zoom', 'src', 'pointer-events', 'align-items', 'justify-items', 'justify-content'],
+    ['box-sizing', 'overflow', 'overflow-x', 'overflow-y'],
+    ['top', 'right', 'bottom', 'left', 'width', 'min-width', 'max-width', 'height', 'min-height', 'max-height'],
     ['padding', 'padding-top', 'padding-right', 'padding-bottom', 'padding-left'],
     ['margin', 'margin-top', 'margin-right', 'margin-bottom', 'margin-left'],
+    ['color', 'stroke'],
     [
         'border',
         'border-width',
@@ -40,6 +44,7 @@ module.exports = [
         'font-emphasize-style',
         'font-smooth',
         'font-smoothing',
+        // [font-style] [font-variant] [font-weight] font-size [ / line-height] font-family;
     ],
     [
         'text-align',
@@ -58,8 +63,8 @@ module.exports = [
         'word-break',
     ],
     [
-        'color',
         'background',
+        // background: [color] [image] [repeat] [attachment] [position] / [size] [origin] [clip];
         'background-color',
         'background-image',
         'background-repeat',
@@ -70,9 +75,10 @@ module.exports = [
         'background-size',
         'background-origin',
         'background-clip',
-        // background: [color] [image] [repeat] [attachment] [position] / [size] [origin] [clip];
+        'fill',
     ],
-    ['stroke', 'stroke-width', 'fill'],
+    ['backdrop-filter'],
+    ['stroke-width', 'vector-effect', 'fill'], // svg
     ['list', 'list-style', 'list-style-type', 'list-style-position', 'list-style-image'],
     ['outline', 'outline-width', 'outline-style', 'outline-color', 'outline-offset', 'opacity', 'box-shadow', 'text-shadow'],
     ['transition', 'transform'],
