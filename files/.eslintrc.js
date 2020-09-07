@@ -223,7 +223,7 @@ module.exports = {
         'operator-linebreak': [2, 'after', { overrides: { '?': 'before', ':': 'before' } }], // [f] 强制操作符使用一致的换行符
         'padded-blocks': [2, 'never'], // [f] 要求或禁止块内填充
         // 'padding-line-between-statements': 0, // [f] 要求或禁止在语句间填充空行
-        // 'quote-props': 0, // [f] 要求对象字面量属性名称用引号括起来
+        'quote-props': [2, 'consistent-as-needed'], // [f] 要求对象字面量属性名称用引号括起来
         'quotes': [2, 'single', { avoidEscape: true, allowTemplateLiterals: true }], // [f] 强制使用一致的反勾号、双引号或单引号
         // 'require-jsdoc': 0, // 要求使用 JSDoc 注释
         'semi': [2, 'always'], // [f] 要求或禁止使用分号代替 ASI
@@ -274,5 +274,19 @@ module.exports = {
         // 'symbol-description': 0, // 要求 symbol 描述
         'template-curly-spacing': [2, 'never'], // [f] 要求或禁止模板字符串中的嵌入表达式周围空格的使用
         // 'yield-star-spacing': [2, 'both'], // [f] 强制在 yield* 表达式中 * 周围使用空格
+
+        'padding-line-between-statements': [
+            'error',
+            { blankLine: 'always', prev: '*', next: 'class' },
+            { blankLine: 'always', prev: 'class', next: '*' },
+            { blankLine: 'always', prev: 'import', next: '*' },
+            { blankLine: 'always', prev: 'export', next: '*' },
+            { blankLine: 'always', prev: '*', next: 'export' },
+            { blankLine: 'any', prev: ['import', 'export'], next: ['import', 'export'] },
+            { blankLine: 'always', prev: 'cjs-import', next: '*' },
+            { blankLine: 'always', prev: '*', next: 'cjs-export' },
+            { blankLine: 'never', prev: 'cjs-import', next: 'cjs-import' },
+            { blankLine: 'never', prev: 'cjs-export', next: 'cjs-export' },
+        ],
     },
 };
