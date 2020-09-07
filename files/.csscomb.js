@@ -1,4 +1,6 @@
-const order = require('/home/hs/.csscomb-order');
+const vscode = require('vscode');
+const path = require('path');
+const order = require(path.resolve(__dirname, '.csscomb-order'));
 
 const spaces = {
     css: {
@@ -19,7 +21,6 @@ const spaces = {
     },
 };
 
-const vscode = require('vscode');
 const lang = vscode.window.activeTextEditor.document.languageId;
 const space = (lang => {
     switch (lang) {
